@@ -1,13 +1,17 @@
 ---
-title: "First Skate Memory"
+title: "Froggy goes to sex-club"
 lang: en
-image: "/images/en-post1.jpg"
-alt: "Skateboard on concrete"
-excerpt: "A quick memory of a parking-lot ollie."
+image: "/images/uk-post1.png"
+alt: "Froggy goes to sex-club"
+excerpt: "The second comic i ever drew"
 layout: base.njk
 permalink: "posts/en/en-post1/index.html"
 ---
 
-# First Skate Memory
+# Froggy goes to sex-club
 
-A tiny story about learning an ollie on rough concrete—scraped knees, big smiles.
+After drawing my first ever comic, about a cute frog surfing - next i decided that frog gotta go to a sex club, so i did just that, i guess
+
+Originally the comic was an 8-page single A4 sheet folded zine, i've re-arranged it all a bit for 1 page 
+
+![comic](/images/uk-post1.png)

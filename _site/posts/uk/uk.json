@@ -1,0 +1,4 @@
+{
+  "lang": "uk",
+  "permalink": "posts/uk/{{ page.fileSlug }}/"
+}
