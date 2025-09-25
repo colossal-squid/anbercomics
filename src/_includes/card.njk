@@ -1,0 +1,9 @@
+<div class="w-full bg-zinc-900/60 border border-zinc-800 rounded-2xl p-5 md:p-6 shadow-xl">
+  <div class="flex flex-col md:flex-row items-center gap-5">
+    <img src="{{ site[lang].avatar | withPrefix(site.pathPrefix) }}" alt="{{ site[lang].name }}" class="w-24 h-24 rounded-full ring-2 ring-zinc-700 object-cover">
+    <div class="text-center md:text-left">
+      <h1 class="text-2xl md:text-3xl font-bold tracking-tight">{{ site[lang].name }}</h1>
+      <p class="mt-2 text-zinc-300">{{ site[lang].bio }}</p>
+    </div>
+  </div>
+</div>

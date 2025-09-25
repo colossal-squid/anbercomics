@@ -1,0 +1,16 @@
+{
+  "name": "anbercomics-11ty",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Two-language 11ty site (UA/EN) with Tailwind (CDN), profile card and gallery of markdown posts.",
+  "scripts": {
+    "run": "eleventy --serve --port=8080",
+    "build": "eleventy",
+    "deploy": "cross-env PATH_PREFIX=/anbercomics/ npm run build && gh-pages -d _site -b gh-pages"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.0",
+    "gh-pages": "^6.1.1",
+    "cross-env": "^7.0.3"
+  }
+}

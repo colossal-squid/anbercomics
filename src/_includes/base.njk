@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="{{ lang | default('uk') }}">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+  {# Title: use provided 'title', else fallback by lang #}
+  {% if title %}
+    {% set pageTitle = title %}
+  {% else %}
+    {% if lang == 'en' %}
+      {% set pageTitle = 'Home' %}
+    {% else %}
+      {% set pageTitle = 'Головна' %}
+    {% endif %}
+  {% endif %}
+  <title>{{ pageTitle }}</title>
+
+  <base href="{{ site.pathPrefix }}">
+
+  <!-- Tailwind via CDN (no build step) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <meta name="color-scheme" content="dark light">
+  <style>
+    .card:focus-visible{ outline: 3px solid rgb(59 130 246); outline-offset: 2px; }
+  </style>
+</head>
+<body class="bg-zinc-950 text-zinc-100 antialiased">
+
+  {# Compute navbar hrefs without ternaries #}
+  {% if lang == 'en' %}
+    {% set homeHref = '/index-en.html' %}
+    {% set switchHref = '/index.html' %}
+  {% else %}
+    {% set homeHref = '/index.html' %}
+    {% set switchHref = '/index-en.html' %}
+  {% endif %}
+
+  <header class="sticky top-0 z-10 backdrop-blur bg-zinc-900/70 border-b border-zinc-800">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="{{ homeHref | withPrefix(site.pathPrefix) }}" class="font-semibold tracking-wide uppercase text-zinc-100">
+        {{ site[lang].nav.home }}
+      </a>
+      <nav class="flex items-center gap-3">
+        <a class="text-sm text-zinc-300 hover:text-white" href="{{ switchHref | withPrefix(site.pathPrefix) }}">
+          {{ site[lang].nav.switch }}
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="max-w-6xl mx-auto px-4 py-8">
+    {{ content | safe }}
+  </main>
+
+  <footer class="max-w-6xl mx-auto px-4 py-10 text-center text-sm text-zinc-400 border-t border-zinc-800">
+    <p>&copy; {{ site.year }} — {{ site[lang].name }}</p>
+  </footer>
+</body>
+</html>

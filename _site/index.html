@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+  
+  
+    
+  
+  <title>Головна</title>
+
+  <base href="/">
+
+  <!-- Tailwind via CDN (no build step) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <meta name="color-scheme" content="dark light">
+  <style>
+    .card:focus-visible{ outline: 3px solid rgb(59 130 246); outline-offset: 2px; }
+  </style>
+</head>
+<body class="bg-zinc-950 text-zinc-100 antialiased">
+
+  
+  
+    
+    
+  
+
+  <header class="sticky top-0 z-10 backdrop-blur bg-zinc-900/70 border-b border-zinc-800">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="/index.html" class="font-semibold tracking-wide uppercase text-zinc-100">
+        Головна
+      </a>
+      <nav class="flex items-center gap-3">
+        <a class="text-sm text-zinc-300 hover:text-white" href="/index-en.html">
+          English
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="max-w-6xl mx-auto px-4 py-8">
+    
+<div class="w-full bg-zinc-900/60 border border-zinc-800 rounded-2xl p-5 md:p-6 shadow-xl">
+  <div class="flex flex-col md:flex-row items-center gap-5">
+    <img src="/images/avatar.jpg" alt="" class="w-24 h-24 rounded-full ring-2 ring-zinc-700 object-cover">
+    <div class="text-center md:text-left">
+      <h1 class="text-2xl md:text-3xl font-bold tracking-tight"></h1>
+      <p class="mt-2 text-zinc-300">Роблю відео-есе про ностальгію, екстрім-культуру 90-х і ранніх 2000-х. Це мій маленький «дім» в інтернеті.</p>
+    </div>
+  </div>
+</div>
+
+
+<section class="mt-8">
+  <h2 class="text-lg font-semibold mb-4">Пости</h2>
+  <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+    
+      <a href="/posts/uk/uk-post1/" class="card block group bg-zinc-900/50 border border-zinc-800 rounded-xl overflow-hidden focus:outline-none">
+        
+          <img src="/images/uk-post1.jpg" alt="Ролики на тротуарі" class="w-full h-48 object-cover group-hover:opacity-90 transition">
+        
+        <div class="p-4">
+          <h3 class="font-medium">Мій роликовий ранок</h3>
+          
+            <p class="text-sm text-zinc-400 mt-1">Перший пост: трохи про дитячий двір і ролики.</p>
+          
+        </div>
+      </a>
+    
+  </div>
+</section>
+
+  </main>
+
+  <footer class="max-w-6xl mx-auto px-4 py-10 text-center text-sm text-zinc-400 border-t border-zinc-800">
+    <p>&copy; 2025 — </p>
+  </footer>
+</body>
+</html>
